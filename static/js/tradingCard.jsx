@@ -87,4 +87,23 @@ ReactDOM.render(
   componentDidMount() {
     this.updateCards();
   }
-  
+
+  render() {
+    const tradingCards = [];
+
+    for(const currentCards of this.state.cards) {
+      tradingCards.push(
+        <TradingCard
+          key={currentCard.name}
+          name={currentCard.name}
+          skill={currentCard.skill}
+          imgUrl={currentCard.imgUrl}
+          />
+        );
+    }
+
+    return (
+      <div>{tradingCards}</div>
+    );
+  }
+}
