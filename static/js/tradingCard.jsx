@@ -83,3 +83,8 @@ ReactDOM.render(
     });
   }
 }
+
+  componentDidMount() {
+    this.updateCards();
+  }
+  
