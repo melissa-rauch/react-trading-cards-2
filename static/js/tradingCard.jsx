@@ -65,9 +65,21 @@ ReactDOM.render(
 );
 
   constructor() {
-  super();
+    super();
 
-  this.state = {cards: []}; //set initial value
-  this.updateDards = this.updateCards.bing(this);
+    this.state = {cards: []}; //set initial value
+    this.updateDards = this.updateCards.bing(this);
+  }
+}
+  UpdateCards() {
+    const floatCard = {
+      name: 'Float',
+      skill: 'baking pretzels',
+      imgUrl: '/static/img/float.jpg'
+    };
+
+    this.setState({
+      cards: [floatCard]
+    });
   }
 }
